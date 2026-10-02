@@ -117,31 +117,31 @@ tr:hover td{background:var(--surface2);}
   <section class="panel active" id="dashboard">
 
     <div class="kpi-grid">
-      <div class="kpi"><span class="tag">KPI GLOBAL</span><div class="val">87%</div><span class="sub">Performance générale</span></div>
-      <div class="kpi h1"><span class="tag">H1 · HEBDOMADAIRE</span><div class="val">85%</div><span class="sub">Réseau & cybersécurité</span></div>
-      <div class="kpi h2"><span class="tag">H2 · MENSUELLE</span><div class="val">75%</div><span class="sub">Mise en pratique</span></div>
-      <div class="kpi h3"><span class="tag">H3 · TRIMESTRIELLE</span><div class="val">100%</div><span class="sub">Veille prospective</span></div>
+      <div class="kpi"><span class="tag">KPI GLOBAL</span><div class="val">0%</div><span class="sub">Performance générale</span></div>
+      <div class="kpi h1"><span class="tag">H1 · HEBDOMADAIRE</span><div class="val">0%</div><span class="sub">Réseau & cybersécurité</span></div>
+      <div class="kpi h2"><span class="tag">H2 · MENSUELLE</span><div class="val">0%</div><span class="sub">Mise en pratique</span></div>
+      <div class="kpi h3"><span class="tag">H3 · TRIMESTRIELLE</span><div class="val">0%</div><span class="sub">Veille prospective</span></div>
     </div>
 
     <div class="card">
       <h2>Objectifs par horizon<span class="sub">Ce que chaque horizon mesure, et à quel rythme</span></h2>
 
       <div class="horizon-row">
-        <div class="horizon-head"><span class="name">H1 - Élargir mes compétences réseau et approfondir la cybersécurité</span><span class="pct">85%</span></div>
+        <div class="horizon-head"><span class="name">H1 - Élargir mes compétences réseau et approfondir la cybersécurité</span><span class="pct">0%</span></div>
         <p>Fréquence : chaque semaine</p>
-        <div class="track"><div class="bar h1" style="width:85%"></div></div>
+        <div class="track"><div class="bar h1" style="width:0%"></div></div>
       </div>
 
       <div class="horizon-row">
-        <div class="horizon-head"><span class="name">H2 - Mettre en pratique mes connaissances en milieu professionnel</span><span class="pct">75%</span></div>
+        <div class="horizon-head"><span class="name">H2 - Mettre en pratique mes connaissances en milieu professionnel</span><span class="pct">0%</span></div>
         <p>Fréquence : mensuelle</p>
-        <div class="track"><div class="bar h2" style="width:75%"></div></div>
+        <div class="track"><div class="bar h2" style="width:0%"></div></div>
       </div>
 
       <div class="horizon-row">
-        <div class="horizon-head"><span class="name">H3 - Observer les tendances en systèmes, réseaux et cybersécurité</span><span class="pct">100%</span></div>
+        <div class="horizon-head"><span class="name">H3 - Observer les tendances en systèmes, réseaux et cybersécurité</span><span class="pct">0%</span></div>
         <p>Fréquence : trimestrielle</p>
-        <div class="track"><div class="bar h3" style="width:100%"></div></div>
+        <div class="track"><div class="bar h3" style="width:0%"></div></div>
       </div>
     </div>
 
@@ -160,7 +160,7 @@ tr:hover td{background:var(--surface2);}
     <div class="card">
       <h2>Évolution du KPI global<span class="sub">Par session de veille - à mettre à jour avec tes propres relevés</span></h2>
       <div class="chart-box"><canvas id="chart"></canvas></div>
-      <p class="note">Les valeurs ci-dessus sont des exemples. Modifie le tableau <code>kpiHistory</code> dans le script pour y mettre tes vrais relevés.</p>
+      <p class="note">Aucune session enregistrée pour l'instant. Ajoute une valeur dans le tableau <code>kpiHistory</code> du script à chaque fois que tu fais une session de veille.</p>
     </div>
 
   </section>
@@ -173,10 +173,7 @@ tr:hover td{background:var(--surface2);}
         <table>
           <thead><tr><th>Date</th><th>Horizon</th><th>Source</th><th>Action</th></tr></thead>
           <tbody>
-            <tr><td>20/09/2026</td><td><span class="pill h1">H1</span></td><td>Techniques de l'Ingénieur</td><td>Lecture d'articles cybersécurité</td></tr>
-            <tr><td>25/09/2026</td><td><span class="pill h2">H2</span></td><td>Pratique personnelle</td><td>Mise en pratique en laboratoire réseau</td></tr>
-            <tr><td>29/09/2026</td><td><span class="pill h1">H1</span></td><td>Techniques de l'Ingénieur</td><td>Veille sur l'évolution des protocoles réseau</td></tr>
-            <tr><td>01/06/2027</td><td><span class="pill h3">H3</span></td><td>Les Assises Infrastructure Numérique</td><td>Participation à la conférence (Annecy)</td></tr>
+            <tr><td colspan="4" style="text-align:center; color:var(--muted);">Aucune session enregistrée pour l'instant</td></tr>
           </tbody>
         </table>
       </div>
@@ -212,10 +209,10 @@ document.querySelectorAll('nav.tabs button').forEach(btn=>{
   });
 });
 
-// Remplace ces valeurs par tes vrais relevés au fil des sessions
+// Ajoute une entrée ici à chaque session de veille, ex: {label:'S01', value:20}
 const kpiHistory = {
-  labels: ['S01','S02','S03','S04'],
-  values: [87, 89, 86, 91]
+  labels: [],
+  values: []
 };
 
 try{
